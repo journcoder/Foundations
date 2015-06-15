@@ -1,0 +1,583 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "##**Do Now Wednesday, June 3, 2015**\n",
+    "\n",
+    "*Reviewing: conditionals, dictionaries, lists*\n",
+    "\n",
+    "**1) What two errors can you spot below?**\n",
+    "\n",
+    "n = 2;\n",
+    "if n < 2:\n",
+    "  print \"Small\"\n",
+    "elif n = 2:\n",
+    "  print \"Medium\"\n",
+    "else print \"Large\"\n",
+    "\n",
+    "**2) Given the following code, '11238' is a _____ and 23 is a _________.**\n",
+    "\n",
+    "{ '11238': 23, '10011': 47 }\n",
+    "\n",
+    "**3) How would you add a 'low' of 54 to the following dictionary?**\n",
+    "\n",
+    "weather = { 'high': 66, 'appearance': 'cloudy' }\n",
+    "\n",
+    "**4) How can we easily get the total of the list below? How about a count of how many elements are in the list?**\n",
+    "\n",
+    "numbers = [ 1, 2, 3, 4, 5, 6, 7]\n",
+    "\n",
+    "**5) Print the 3rd element of a list named dogs.**\n",
+    "\n",
+    "**5a) Given the following dictionary, how can we get a list of all three ZIP codes?**\n",
+    "\n",
+    "data = { '11238': 23, '10011': 47, '10011': 10 }\n",
+    "\n",
+    "**5b) Write a for loop that prints all three zip codes on separate lines.**\n",
+    "\n",
+    "**6) Given the following list, add together any numbers greater than 10.**\n",
+    "\n",
+    "values = [20, 30 ,10, 5, 99]\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**1) What two errors can you spot below?**\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-1-7177398c41a4>, line 4)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-1-7177398c41a4>\"\u001b[0;36m, line \u001b[0;32m4\u001b[0m\n\u001b[0;31m    elif n = 2:\u001b[0m\n\u001b[0m           ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = 2;\n",
+    "if n < 2:\n",
+    "  print \"Small\"\n",
+    "elif n = 2:\n",
+    "  print \"Medium\"\n",
+    "else print \"Large\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true
+   },
+   "source": [
+    "So, the first error noticed is within the elif command. The value of variable 'n' is already established. So this conditional is trying to say that if n is == 2. It should also be:\n",
+    "else:\n",
+    "    print \"Large\" "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "2) Given the following code, '11238' is a _ and 23 is a _.\n",
+    "{ '11238': 23, '10011': 47 }\n",
+    "\n",
+    "Without the quotes, 23 is a value or an int. The string is a key. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "3) How would you add a 'low' of 54 to the following dictionary?\n",
+    "weather = { 'high': 66, 'appearance': 'cloudy' }\n",
+    "\n",
+    "To append a list you can either do \n",
+    "weather.append[low: 54]\n",
+    "\n",
+    "OR \n",
+    "\n",
+    "weather[low] = 54 \n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "4) How can we easily get the total of the list below? How about a count of how many elements are in the list?\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "metadata": {
+    "collapsed": false,
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "28\n",
+      "7\n"
+     ]
+    }
+   ],
+   "source": [
+    "numbers = [ 1, 2, 3, 4, 5, 6, 7]\n",
+    "print sum(numbers) #total\n",
+    "print len(numbers) #count"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "5) Print the 3rd element of a list named dogs."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "If there were a list of elements in dogs you would type: \n",
+    "print dogs[2] ... counting starts at '0' "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "5a) Given the following dictionary, how can we get a list of all three ZIP codes?\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "11238\n",
+      "10011\n"
+     ]
+    }
+   ],
+   "source": [
+    "data = { '11238': 23, '10011': 47, '10011': 10 }\n",
+    "for key in data:\n",
+    "    print key"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "this list also gets rid of repeats. This would also answer 5b) Write a for loop that prints all three zip codes on eseparate lines."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "6) Given the following list, add together any numbers greater than 10.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "149"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "values = [20, 30 ,10, 5, 99]\n",
+    "sum ([v for v in values if 10 <v])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "OR you could also do"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "149\n"
+     ]
+    }
+   ],
+   "source": [
+    "bigvalues = []\n",
+    "values = [20, 30 ,10, 5, 99]\n",
+    "for v in values:\n",
+    "    if 10< v:\n",
+    "        bigvalues.append(v)\n",
+    "print sum (bigvalues)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**NOTES FROM CLASS**"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**CLASS NOTES FROM THE DO NOW **\n",
+    "*1) What errors can you spot in the following code?*\n",
+    "\n",
+    "n = 2;\n",
+    " if n < 2:\n",
+    "\tprint \"Small\"\n",
+    " elif n = 2:\n",
+    " \tprint \"Medium\"\n",
+    " else print \"Large\"\n",
+    "\n",
+    " ------ should be ------\n",
+    "\n",
+    "n = 2 # ; is NOT necessary in Python\n",
+    "if n < 2:\n",
+    "\tprint \"Small\"\n",
+    "elif n == 2: # == NOT =\n",
+    "\tprint \"Medium\"\n",
+    "else: # else: NOT else\n",
+    "\tprint \"Large\"\n",
+    "\n",
+    "*2) Given the following code, '11238' is a key and 23 is a value*\n",
+    "{ '11238':23, '10011':47 }\n",
+    "\n",
+    "*3) How would you add a 'low' of 54 to the following dictionary?*\n",
+    "weather = { 'high':66, 'appearance':'cloudy' }\n",
+    "weather['low'] = 54\n",
+    "\n",
+    "*4) How can we easily get the total of the list below? How about a count of how many elements are in the list? *\n",
+    "numbers = [ 1,2,3,4,5,6,7 ]\n",
+    "print sum( numbers )\n",
+    "print len( numbers )\n",
+    "\n",
+    "*5) Print the 3rd element of a list named dogs.*\n",
+    "dogs = [ 'Labrador Retriever', 'Rottweiler', 'Shih Tzu', 'Miniature Schnauzer', 'Lhasa Apso', 'Yorkshire Terrier', 'Bulldog', 'Dobermann Pinscher', 'Bull Terrier', 'Weimaraner', 'Pug' ]\n",
+    "print dogs[2]\n",
+    "\n",
+    "*5a) Given the following dictionary, how can we get a list of all three ZIP codes? *\n",
+    "data = { '11238':23, '10011':47, '10012':10 }\n",
+    "print data.keys()\n",
+    "\n",
+    "*5b) Write a for loop that prints all three zip codes on separate lines*\n",
+    "for key in data.keys():\n",
+    "\tprint key\n",
+    "\n",
+    "*6) Given the following list, add together any numbers greater than 10.*\n",
+    "values = [ 20,30,10,5,99 ]\n",
+    "sum( [ v  for v in values  if 10 < v ] )\n",
+    "\n",
+    "--- Or,\n",
+    "values = [ 20,30,10,5,99 ]\n",
+    "bigvalues = []\n",
+    "for v in values:\n",
+    "\tif 10 < v:\n",
+    "\t\tbigvalues.append( v )\n",
+    "print sum( bigvalues )\n",
+    "\n",
+    "-- Or,\n",
+    "values = [ 20,30,10,5,99 ]\n",
+    "total = 0\n",
+    "for v in values:\n",
+    "\tif 10 < v:\n",
+    "\t\ttotal += v # equivalent to total = total + v\n",
+    "print total"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**USING CSV FILES**\n",
+    "\n",
+    "########################################################################\n",
+    "*3: Save a CSV file*\n",
+    "\n",
+    "http://project.wnyc.org/dogs-of-nyc/\n",
+    "On the map panel, Click \"data\" on the bottom left corner\n",
+    "https://www.google.com/fusiontables/data?docid=1pKcxc8kzJbBVzLu_kgzoAMzqYhZyUhtScXjB0BQ#rows:id=1\n",
+    "\n",
+    "File > Download > All rows, CSV, Download\n",
+    "\n",
+    "Move the CSV file to your Lede folder\n",
+    "\n",
+    "########################################################################\n",
+    "\n",
+    "4: Poke around with it in the terminal/Babun\n",
+    "\n",
+    " In the terminal/babun, move to your Lede folder\n",
+    " (pwd, cd, ls are your friends)\n",
+    "\n",
+    " Rename the CSV file, so it has NO spaces, say Dogs.csv\n",
+    "   Type mv D and hit tab\n",
+    "   You'll get mv Dogs\\ of\\ NYC\\ \\|\\ WNYC.csv\n",
+    " mv Dogs\\ of\\ NYC\\ \\|\\ WNYC.csv Dogs.csv\n",
+    " (move) (but it also renames too)\n",
+    "DO:  wc -l Dogs.csv\n",
+    " (word count, but count lines instead of words)\n",
+    " cat Dogs.csv\n",
+    "(see everything in the file Dogs.csv)\n",
+    " head -n 10 Dogs.csv\n",
+    " (see the first 10 lines in the file Dogs.csv)\n",
+    "You can see the header of the CSV now\n",
+    "tail -n 10 Dogs.csv\n",
+    "(see the last 10 lines in the file Dogs.csv)\n",
+    "head -n 10 Dogs.csv > sample.csv\n",
+    "(save the first 10 lines in the file Dogs.csv to a new file sample.csv)\n",
+    "\n",
+    "\n",
+    "########################################################################\n",
+    "5: Poke around with it in Python\n",
+    "** IMPORTING PYTHON MODULES/LIBRARIES **\n",
+    "READING CSV'S INTO PYTHON\n",
+    "In Sublime Text,\n",
+    "\n",
+    "import csv\n",
+    "ourfile = open( \"sample.csv\",\"rb\" )\n",
+    "dogs_csvreader = csv.reader( ourfile )\n",
+    "print type( dogs_csvreader )\n",
+    "\n",
+    "In terminal/babun,\n",
+    "########################################################################\n",
+    "3: Save a CSV file\n",
+    "\n",
+    " http://project.wnyc.org/dogs-of-nyc/\n",
+    "\n",
+    " On the map panel,\n",
+    " Click \"data\" on the bottom left corner\n",
+    " https://www.google.com/fusiontables/data?docid=1pKcxc8kzJbBVzLu_kgzoAMzqYhZyUhtScXjB0BQ#rows:id=1\n",
+    "\n",
+    " File > Download > All rows, CSV, Download\n",
+    "\n",
+    " Move the CSV file to your Lede folder\n",
+    "\n",
+    "\n",
+    "########################################################################\n",
+    " 4: Poke around with it in the terminal/Babun\n",
+    "\n",
+    " In the terminal/babun,\n",
+    " move to your Lede folder\n",
+    " (pwd, cd, ls are your friends)\n",
+    "\n",
+    " Rename the CSV file, so it has NO spaces, say Dogs.csv\n",
+    " Type mv D and hit tab\n",
+    " You'll get mv Dogs\\ of\\ NYC\\ \\|\\ WNYC.csv\n",
+    " mv Dogs\\ of\\ NYC\\ \\|\\ WNYC.csv Dogs.csv\n",
+    " (move) (but it also renames too)\n",
+    "\n",
+    "\n",
+    "wc -l Dogs.csv\n",
+    " (word count, but count lines instead of words)\n",
+    "\n",
+    " cat Dogs.csv\n",
+    " (see everything in the file Dogs.csv)\n",
+    "\n",
+    " head -n 10 Dogs.csv\n",
+    " (see the first 10 lines in the file Dogs.csv)\n",
+    " You can see the header of the CSV now\n",
+    "for dog in dogs_csvreader: # loop over each row\n",
+    "\n",
+    "        print dog # the row\n",
+    "        \n",
+    "        print dog[0] # the row's 1st value\n",
+    "        \n",
+    "\n",
+    "tail -n 10 Dogs.csv\n",
+    " (see the last 10 lines in the file Dogs.csv)\n",
+    "\n",
+    " head -n 10 Dogs.csv > sample.csv\n",
+    " (save the first 10 lines in the file Dogs.csv to a new file sample.csv)\n",
+    "\n",
+    "\n",
+    "########################################################################\n",
+    " 5: Poke around with it in Python\n",
+    "\n",
+    " **IMPORTING PYTHON MODULES/LIBRARIES**\n",
+    " READING CSV'S INTO PYTHON\n",
+    "\n",
+    " In Sublime Text:\n",
+    "\n",
+    "import csv\n",
+    "ourfile = open( \"sample.csv\",\"rb\" )\n",
+    "dogs_csvreader = csv.reader( ourfile )\n",
+    "print type( dogs_csvreader )\n",
+    "\n",
+    " In terminal/babun,\n",
+    " you get the result\n",
+    " <type '_csv.reader'>\n",
+    "\n",
+    "for dog in dogs_csvreader: # loop over each row\n",
+    "\tprint dog # the row\n",
+    "\tprint dog[0] # the row's 1st value\n",
+    "\n",
+    "<type '_csv.reader'>\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "for dog in dogs_csvreader: # loop over each row\n",
+    "\tprint dog # the row\n",
+    "\tprint dog[0] # the row's 1st value"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "*In terminal/babun, you get the result*\n",
+    "['dog_name', 'gender', 'breed', 'birth', 'dominant_color', 'secondary_color', 'third_color', 'spayed_or_neutered', 'guard_or_trained', 'borough', 'zip_code']\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "*INSTEAD OF csv.reader() YOU PROBABLY WANT csv.DictReader()*\n",
+    "\n",
+    "In Sublime Text:\n",
+    "\n",
+    "import csv\n",
+    "ourfile = open( \"sample.csv\" )\n",
+    "dogs_listofdicts = list( csv.DictReader( ourfile ) ) # list of dictionaries\n",
+    "print type( dogs_listofdicts )\n",
+    "\n",
+    "*In terminal/babun, you get the result*\n",
+    "<type 'list'>\n",
+    "\n",
+    "for dog in dogs_listofdicts: # loop over each row\n",
+    "\tprint dog # the row\n",
+    "\tprint dog['gender'] # the row's 'gender' value\n",
+    "\n",
+    "In terminal/babun,you get the result: {'gender': 'M', 'breed': 'Afghan Hound', 'secondary_color': 'BLACK', 'dominant_color': 'BRINDLE', 'guard_or_trained': 'No', 'birth': 'Jan-00', 'third_color': 'n/a', 'borough': 'Manhattan', 'dog_name': 'Buddy', 'zip_code': '10003', 'spayed_or_neutered': 'Yes'}\n",
+    "\n",
+    "number_of_dogs_named_Trouble = 0\n",
+    "for dog in dogs_listofdicts:\n",
+    "\tif dog['dog_name'] == \"Trouble\":\n",
+    "\t\tnumber_of_dogs_named_Trouble += 1\n",
+    "print number_of_dogs_named_Trouble\n",
+    "\n",
+    "*In terminal/babun, you get the result:*\n",
+    "\n",
+    "myzipcode = \"11238\"\n",
+    "number_of_dogs_in_my_zipcode = 0\n",
+    "for dog in dogs_listofdicts:\n",
+    "\tif dog['zip_code'] == myzipcode:\n",
+    "\t\tnumber_of_dogs_in_my_zipcode += 1\n",
+    "print number_of_dogs_in_my_zipcode\n",
+    "\n",
+    "In terminal/babun, you get the result\n",
+    "\n",
+    "--- Wait we want to see the full dogs data now. Change the above to the following:\n",
+    "import csv\n",
+    "ourfile = open( \"Dogs.csv\" )\n",
+    "dogs_listofdicts = list( csv.DictReader( ourfile ) )\n",
+    "\n",
+    "myzipcode = \"11238\"\n",
+    "number_of_dogs_in_my_zipcode = 0\n",
+    "for dog in dogs_listofdicts:\n",
+    "\tif dog['zip_code'] == myzipcode:\n",
+    "\t\tnumber_of_dogs_in_my_zipcode += 1\n",
+    "print number_of_dogs_in_my_zipcode\n",
+    "\n",
+    "In terminal/babun, you get the result\n",
+    " 594\n",
+    "\n",
+    "-- NOT IN\n",
+    "\n",
+    "zipcode_list = []\n",
+    "for dog in dogs_listofdicts:\n",
+    "\tif dog['zip_code'] not in zipcode_list:\n",
+    "\t\tzipcode_list.append( dog['zip_code'] )\n",
+    "print zipcode_list\n",
+    "\n",
+    "In terminal/babun, you get the result\n",
+    "['10003', '10021', '10034', '10024', '10022', '10472', '10023', '11354', '10469', '10473', '10308', '11385', '11364', '10038', '11373', '10457', '11206', '11357', '11423', '10309', '10310', '11235', '11420', '11421', '11379', '11412', '11207', '10463', '11362', '11368', '11205', '11372', '11377', '10002', '10467', '10128', '11697', '10455', '10037', '10028', '10466', '10014', '11211', '10312', '11434', '10029', '10470', '11356', '11375', '11234', '10009', '11355', '11693', '10305', '11231', '10016', '11212', '11104', '11209', '10465', '11219', '11203', '11224', '11238', '10452', '11215', '10011', '11418', '11218', '11223', '11228', '10013', '11432', '11435', '11249', '11101', '10459', '10036', '10039', '11221', '11102', '11422', '10462', '11414', '10461', '11370', '10301', '11361', '10306', '11236', '10040', '10032', '10302', '11229', '10025', '10471', '10012', '10030', '10026', '10017', '11222', '11419', '10314', '11415', '10069', '10010', '11220', '10456', '10019', '10304', '11204', '11365', '11427', '11106', '10303', '11232', '11214', '11201', '11367', '10035', '11208', '11363', '11413', '10033', '10454', '10001', '10307', '10458', '11374', '11417', '10007', '10460', '10474', '10453', '11237', '11694', '10027', '11217', '10468', '11103', '11226', '11225', '10451', '11369', '11378', '11105', '11216', '11691', '11429', '10031', '11433', '11426', '11358', '11213', '11692', '11233', '10005', '11004', '11210', '10464', '10044', '11428', '11230', '10123', '11416', '10113', '11366', '11202', '11360', '11411', '11436', '11239', '10280', '10018', '11425', '10282', '10004', '10475', '10006', '10313', '10163', '10008', '10120', '11005', '10020', '11243', '10159', '10108', '10150', '10162', '10156', '11386', '10015', '10112', '11690', '10129', '10125', '10080', '10172', '10274', '10043', '11431', '10101', '10276', '11352', '10116', '11353', '10203', '10079', '10185', '11242', '10119', '10153', '10175', '11388', '10045', '10138', '10111', '10107', '10151', '10118', '11430', '11351', '11359', '10154']\n",
+    "\n",
+    "for zipcode in zipcode_list:\n",
+    "\tnumber_of_dogs_in_zipcode = 0\n",
+    "\tfor dog in dogs_listofdicts:\n",
+    "\t\tif dog['zip_code'] == zipcode:\n",
+    "\t\t\tnumber_of_dogs_in_zipcode += 1\n",
+    "\tprint \"There are\",number_of_dogs_in_zipcode,\"dogs in\",zipcode"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 2",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
